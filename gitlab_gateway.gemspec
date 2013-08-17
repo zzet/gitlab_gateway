@@ -1,10 +1,10 @@
 #-*- encoding: utf-8 -*-
 $:.push File.expand_path('../lib', __FILE__)
-require 'ecwid_gateway/version'
+require 'gitlab_gateway/version'
 
 Gem::Specification.new do |gem|
   gem.name          = "gitlab_gateway"
-  gem.version       = EcwidGateway::VERSION
+  gem.version       = GitlabGateway::VERSION
   gem.authors       = ["Andrey Kumanyaev"]
   gem.email         = ["me@zzet.org"]
   gem.description   = %q{Gitlab API wrapper}
@@ -19,9 +19,10 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "~> 1.3"
-  spec.add_development_dependency "rake"
+  gem.add_development_dependency "bundler", "~> 1.3"
+  gem.add_development_dependency "rake"
 
   gem.add_runtime_dependency 'weary'
   gem.add_runtime_dependency 'multi_json'
+  gem.add_runtime_dependency 'active_support'
 end
